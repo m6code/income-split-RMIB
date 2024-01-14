@@ -5,17 +5,17 @@ workbox.routing.registerRoute(
     new workbox.strategies.CacheFirst()
 );
 
-// workbox.routing.registerRoute(
-//     ({request}) => request.destination === "script",
-//     new workbox.strategies.NetworkFirst()
-// );
+workbox.routing.registerRoute(
+    ({request}) => request.destination === "script",
+    new workbox.strategies.NetworkFirst()
+);
 
-// workbox.routing.registerRoute(
-//     ({request}) => request.destination === "style",
-//     new workbox.strategies.NetworkFirst()
-// );
+workbox.routing.registerRoute(
+    ({request}) => request.destination === "style",
+    new workbox.strategies.NetworkFirst()
+);
 
-// workbox.routing.registerRoute(
-//     ({request}) => request.destination === "document",
-//     new workbox.strategies.NetworkFirst()
-// );
+workbox.routing.registerRoute(
+    ({request}) => request.destination === "document",
+    new workbox.strategies.NetworkFirst()
+);
