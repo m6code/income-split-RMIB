@@ -4,8 +4,10 @@
         <title>RMIB Income Splitter</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#000000"/>
         <link href="./app.css" rel="stylesheet">
         <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
          <div class="container">
@@ -31,7 +33,7 @@
         <script src="./app.js"> </script>
          <script>
              if("serviceWorker" in navigator) {
-                 navigator.serviceWorker.register("/sw.js");
+                 navigator.serviceWorker.register("/serviceWorker.js");
              }
          </script>
     </body>
