@@ -3,11 +3,12 @@ importScripts( 'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbo
 
 const CACHE_VERSION = 1;
 const CACHE_NAME = `rmib-cache-v${CACHE_VERSION}`;
+
 const urlsToCache = [
     '/',
-    '/app.css',
-    '/app.js',
-    '/index.html'
+    './app.css',
+    './app.js',
+    './index.html'
 ];
 
 self.addEventListener('install', event => {
