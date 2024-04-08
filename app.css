@@ -50,15 +50,21 @@ textarea, select {
 
 
 :root {
-    color-scheme: light dark;
+    color-scheme: light;
     /* Colours */
     --color-bg-body: #fff;
     --color-text-primary: #000000;
     --color-bg-button: #ADADAD;
     --color-text-button: #FFFFFF;
     --color-bg-card: #F8f8f8;
-    --icon-fill: var(--color-bg-button);
+    --color-bg-text: #F9FAFC;
+    --icon-fill: var(--color-bg-card);
     --icon-fill-hover: var(--color-text-primary);
+}
+
+body {
+    background: var(--color-bg-body);
+    color: var(--color-text-primary);
 }
 
 .container {
@@ -85,7 +91,7 @@ input {
     border: none;
     border-radius: 2rem;
     padding: 1rem 2rem;
-    background: #F8F8F8;
+    background: var(--color-bg-text);
     box-shadow: 4px 6px 4px 2px rgba(0, 0, 0, 0.25), 2px 4px 0px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
@@ -121,16 +127,6 @@ label + button:active {
     box-shadow: 2px 6px 4px 4px rgba(0, 0, 0, 0.25);    
 }
 
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
-    body{
-            
-    }
-
-} 
 
 
 /*TOGGLE THEME BUTTON START*/
@@ -211,3 +207,46 @@ label + button:active {
 }
 
 /*TOGGLE COLOR SCHEME END*/
+
+/*COLOR SCHEMES*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --color-bg-body: #4A4E69;
+    --color-text-primary: #FAE8FF;
+    --color-bg-button: #22223B;
+    --color-text-button: #FAE8FF;
+    --color-bg-card: #383953;
+    --color-bg-text: #ADADAD;
+    --icon-fill: var(--color-text-button);
+    --icon-fill-hover: #fff;
+  }
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+  --surface3: var(--surface3-light);
+  --surface4: var(--surface4-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+
+    --color-bg-body: #fff;
+    --color-text-primary: #000000;
+    --color-bg-button: #ADADAD;
+    --color-text-button: #FFFFFF;
+    --color-bg-card: #F8f8f8;
+    --icon-fill: var(--color-bg-button);
+    --icon-fill-hover: var(--color-text-primary);
+}
+
