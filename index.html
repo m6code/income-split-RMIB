@@ -8,6 +8,7 @@
         <link href="./app.css" rel="stylesheet">
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="./app.js" defer> </script>
     </head>
     <body>
 <!--          <div class="container">
@@ -29,13 +30,8 @@
                 </div>
              </div>
             
-         </div>
-        <script src="./app.js"> </script>
-         <script>
-             if("serviceWorker" in navigator) {
-                 navigator.serviceWorker.register("/serviceWorker.js");
-             }
-         </script> -->
+         </div>  -->
+         
          <div class="container"> 
              <header>
                  <h1>Splits</h1>
@@ -51,11 +47,18 @@
                          <p>N<span id="keeps">0</span> for keeps</p>
                          <p>N<span id="payback">0</span> for repayment</p>
                          <p>N<span id="emergency">0</span> for emergency</p>
-                         <p><strong><span id="total">0</span></strong> is deductibles</p>
-                         <p><strong><span id="total">0</span></strong> is your balance</p>
+                         <p><strong>N<span id="total">0</span></strong> is deductibles</p>
+                         <p><strong>N<span id="balance">0</span></strong> is your balance</p>
                      </div>
                  </div>
              </main>
          </div>
+        
+         <script>
+             if("serviceWorker" in navigator) {
+                 navigator.serviceWorker.register("/serviceWorker.js");
+             }
+         </script>
+
     </body>
 </html>
