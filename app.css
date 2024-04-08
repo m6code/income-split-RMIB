@@ -1,10 +1,122 @@
-:root {
-    color-scheme: light dark;
+/*CSS RESET START*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/*CSS RESET END*/
+
+
+:root {
+    color-scheme: light dark;
+    /* Colours */
+    --color-text-primary: #000000;
+    --color-bg-button: #ADADAD;
+    --color-text-button: #FFFFFF;
+    --color-bg-card: #F8f8f8;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    
+/*    align-items: center;*/
+/*    height: 100vh;*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+label + button, input {
+    margin-top: 2rem;
+    display: block;
+    width: 22rem;
+}
+
+input {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    background: #F8F8F8;
+    box-shadow: 4px 6px 4px 2px rgba(0, 0, 0, 0.25), 2px 4px 0px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+label + button {
+    background: var(--color-bg-button);
+    color:var(--color-text-button);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 4px 6px 2px 0px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    font-size: 1.5em;
+}
+
+label + button:hover {
+    background: #000;
+}
+
+label + button:active {
+    background: var(--color-bg-button);
+}
+
+.result-card {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: var(--color-bg-card);
+    box-shadow: 2px 6px 4px 4px rgba(0, 0, 0, 0.25);    
+}
+
+
 @media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light;
+    }
     body{
-        background: #1c1c79;
+            
     }
 
 } 

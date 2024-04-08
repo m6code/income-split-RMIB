@@ -10,7 +10,7 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-         <div class="container">
+<!--          <div class="container">
              <div class="main">
                 <div class="input-income">
                     <input type="number" name="income" id="income" placeholder="Enter Income" onblur="updateValues()">
@@ -35,6 +35,27 @@
              if("serviceWorker" in navigator) {
                  navigator.serviceWorker.register("/serviceWorker.js");
              }
-         </script>
+         </script> -->
+         <div class="container"> 
+             <header>
+                 <h1>Splits</h1>
+                 <button>Toggler</button>
+             </header>
+             <main>
+                 <div>
+                     <label>
+                         <input type="number" name="income" id="income" placeholder="Enter your income for the month"/>
+                     </label>
+                     <button onclick="updateValues()">Split Income Now</button>
+                     <div class="result-card">
+                         <p>N<span id="keeps">0</span> for keeps</p>
+                         <p>N<span id="payback">0</span> for repayment</p>
+                         <p>N<span id="emergency">0</span> for emergency</p>
+                         <p><strong><span id="total">0</span></strong> is deductibles</p>
+                         <p><strong><span id="total">0</span></strong> is your balance</p>
+                     </div>
+                 </div>
+             </main>
+         </div>
     </body>
 </html>
