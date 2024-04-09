@@ -104,11 +104,6 @@ label + button {
     font-size: 1.5em;
 }
 
-header button {
-    background: none;
-    border: none;
-}
-
 label + button:hover {
     background: var(--color-bg-button-hover);
 }
@@ -142,4 +137,18 @@ label + button:active {
     --icon-fill: var(--color-text-button);
     --icon-fill-hover: #f0abfc;
   }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-bg-body: #4A4E69;
+    --color-text-primary: #FAE8FF;
+    --color-bg-button: #22223B;
+    --color-bg-button-hover: hsl(246.81, 12.5%, 25%);
+    --color-text-button: #FAE8FF;
+    --color-bg-card: #383953;
+    --color-bg-text: #ADADAD;
+    --icon-fill: var(--color-text-button);
+    --icon-fill-hover: #f0abfc;
 }
