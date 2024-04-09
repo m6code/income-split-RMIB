@@ -1,5 +1,3 @@
-  @import "https://unpkg.com/open-props/easings.min.css";
-
 /*CSS RESET START*/
 
 *,
@@ -52,14 +50,15 @@ textarea, select {
 :root {
     color-scheme: light;
     /* Colours */
-    --color-bg-body: #fff;
-    --color-text-primary: #000000;
-    --color-bg-button: #ADADAD;
-    --color-text-button: #FFFFFF;
-    --color-bg-card: #F8f8f8;
+    --color-bg-body: #FFF7ED;
+    --color-text-primary: #9A3412;
+    --color-bg-button: #9A3412;
+    --color-bg-button-hover: #7c2d12;
+    --color-text-button: #FDBA74;
+    --color-bg-card: #FED7AA;
     --color-bg-text: #F9FAFC;
-    --icon-fill: var(--color-bg-card);
-    --icon-fill-hover: var(--color-text-primary);
+    --icon-fill: var(--color-bg-button);
+    --icon-fill-hover: var(--color-bg-button-hover);
 }
 
 body {
@@ -111,7 +110,7 @@ header button {
 }
 
 label + button:hover {
-    background: #000;
+    background: var(--color-bg-button-hover);
 }
 
 label + button:active {
@@ -128,86 +127,6 @@ label + button:active {
 }
 
 
-
-/*TOGGLE THEME BUTTON START*/
-.sun-and-moon > :is(.moon, .sun, .sun-beams) {
-  transform-origin: center;
-}
-
-.sun-and-moon > :is(.moon, .sun) {
-  fill: var(--icon-fill);
-}
-
-.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
-  fill: var(--icon-fill-hover);
-}
-
-.sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill);
-  stroke-width: 2px;
-}
-
-.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
-  stroke: var(--icon-fill-hover);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun {
-  transform: scale(1.75);
-}
-
-[data-theme="dark"] .sun-and-moon > .sun-beams {
-  opacity: 0;
-}
-
-[data-theme="dark"] .sun-and-moon > .moon > circle {
-  transform: translateX(-7px);
-}
-
-@supports (cx: 1) {
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
-    cx: 17;
-    transform: translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .sun-and-moon > .sun {
-    transition: transform .5s var(--ease-elastic-3);
-  }
-
-  .sun-and-moon > .sun-beams {
-    transition: transform .5s var(--ease-elastic-4), opacity .5s var(--ease-3);
-  }
-
-  .sun-and-moon .moon > circle {
-    transition: transform .25s var(--ease-out-5);
-  }
-
-  @supports (cx: 1) {
-    .sun-and-moon .moon > circle {
-      transition: cx .25s var(--ease-out-5);
-    }
-  }
-
-  [data-theme="dark"] .sun-and-moon > .sun {
-    transition-timing-function: var(--ease-3);
-    transition-duration: .25s;
-    transform: scale(1.75);
-  }
-
-  [data-theme="dark"] .sun-and-moon > .sun-beams {
-    transition-duration: .15s;
-    transform: rotateZ(-25deg);
-  }
-
-  [data-theme="dark"] .sun-and-moon > .moon > circle {
-    transition-duration: .5s;
-    transition-delay: .25s;
-  }
-}
-
-/*TOGGLE COLOR SCHEME END*/
-
 /*COLOR SCHEMES*/
 @media (prefers-color-scheme: dark) {
   :root {
@@ -216,37 +135,11 @@ label + button:active {
     --color-bg-body: #4A4E69;
     --color-text-primary: #FAE8FF;
     --color-bg-button: #22223B;
+    --color-bg-button-hover: hsl(246.81, 12.5%, 25%);
     --color-text-button: #FAE8FF;
     --color-bg-card: #383953;
     --color-bg-text: #ADADAD;
     --icon-fill: var(--color-text-button);
-    --icon-fill-hover: #fff;
+    --icon-fill-hover: #f0abfc;
   }
 }
-
-[color-scheme="light"] {
-  color-scheme: light;
-
-  --brand: var(--brand-light);
-  --text1: var(--text1-light);
-  --text2: var(--text2-light);
-  --surface1: var(--surface1-light);
-  --surface2: var(--surface2-light);
-  --surface3: var(--surface3-light);
-  --surface4: var(--surface4-light);
-  --surface-shadow: var(--surface-shadow-light);
-  --shadow-strength: var(--shadow-strength-light);
-}
-
-[color-scheme="dark"] {
-  color-scheme: dark;
-
-    --color-bg-body: #fff;
-    --color-text-primary: #000000;
-    --color-bg-button: #ADADAD;
-    --color-text-button: #FFFFFF;
-    --color-bg-card: #F8f8f8;
-    --icon-fill: var(--color-bg-button);
-    --icon-fill-hover: var(--color-text-primary);
-}
-

@@ -8,6 +8,8 @@
         <link href="./app.css" rel="stylesheet">
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./theme-toggle.css">
+        <script type="text/javascript" src="./theme-toggle.js"></script>
         <script src="./app.js" defer> </script>
     </head>
     <body>
@@ -58,7 +60,7 @@
              <main>
                  <div>
                      <label>
-                         <input type="number" name="income" id="income" placeholder="Enter your income for the month"/>
+                         <input type="text" name="income" id="income" placeholder="Enter your income for the month"/>
                      </label>
                      <button onclick="updateValues()">Split Income Now</button>
                      <div class="result-card">
