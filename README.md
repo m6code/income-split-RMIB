@@ -7,8 +7,9 @@
 
 
 ## Level 1
- - [ ] Add ability to accept numbers containing comma (,) and white spaces
-   - [ ] Use regex to replace commas and whitspaces in string
-   - [ ] alert user using (Sonner)[https://sonner.emilkowal.ski/] about errors
+- [x] Use the naira symbol code in place of N
+- [ ] Add ability to accept numbers containing comma (,) and white spaces
+ - [ ] Use regex to replace commas and whitspaces in string
+ - [ ] alert user using (Sonner)[https://sonner.emilkowal.ski/] about errors
 - [x] Implement system dependant light/dark mode
 - [x] Implement dark theme toggle button
