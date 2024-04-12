@@ -15,7 +15,9 @@ incomeField.addEventListener("keyup", (event) => {
 })
 
 function calculateIncome(incme) {
-    const income = Number(incme);
+    // Regular Expression to replace all commas (,) and whitespaces ( ) characters
+    const regex = /[ ,]+/g
+    const income = Number(incme.replace(regex, ""));
     console.log(typeof (income));
     if (!isNaN(income)) {
         const keeps = (1 / 10) * income;
