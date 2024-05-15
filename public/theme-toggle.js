@@ -1,4 +1,6 @@
-/** TOGGLE THEME BEHAVIOR"* */
+/**
+ * TOGGLE THEME BEHAVIOR"*
+ * */
 const storageKey = "theme-preference";
 
 const onClick = () => {
