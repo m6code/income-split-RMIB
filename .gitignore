@@ -1,1 +1,4 @@
-.idea
+.idea.vite/
+node_modules/
+.idea/
+.vite/
