@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Main = () => {
   const [results, setResults] = useState({
@@ -15,7 +15,7 @@ export const Main = () => {
     // Regular Expression to replace all commas (,) and whitespaces ( ) characters
     const regex = /[ ,]+/g;
     const income = Number(incme.replace(regex, ""));
-    console.log(typeof income);
+    // console.log(typeof income);
     if (!isNaN(income)) {
       const keeps = (1 / 10) * income;
       const payback = (2 / 10) * income;
@@ -36,9 +36,11 @@ export const Main = () => {
     calculateIncomeSplit(inputValueRef.current.value);
   };
 
-  inputValueRef.current.addEventListener("keyup", (event) => {
-    if (event.key === "Enter") handleSubmit();
-  });
+  useEffect(() => {
+    inputValueRef.current.addEventListener("keyup", (event) => {
+      if (event.key === "Enter") handleSubmit();
+    });
+  }, []);
 
   const { keeps, payback, total, emergency, balance } = results;
 
