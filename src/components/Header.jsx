@@ -4,7 +4,7 @@ export function Header() {
   return (
     <header>
       <h1>Splits</h1>
-      <SunMoonToggler />
+      <SunMoonToggler onClick={getColorPreference()} />
     </header>
   );
 }

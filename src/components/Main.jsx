@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 
 export const Main = () => {
   const [results, setResults] = useState({
@@ -29,7 +30,7 @@ export const Main = () => {
         total,
         balance,
       });
-    } else alert(`${incme} is not a valid number`);
+    } else toast.error(`${incme} is not a valid number`);
   };
 
   const handleSubmit = () => {
