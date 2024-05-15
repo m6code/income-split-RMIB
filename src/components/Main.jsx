@@ -14,23 +14,28 @@ export const Main = () => {
         <button onClick="">Split Income Now</button>
         <div className="result-card" tabIndex="0">
           <p>
-            &#x20A6<span id="keeps">0</span> for keeps
+            {"\u20A6"}
+            <span id="keeps">0</span> for keeps
           </p>
           <p>
-            &#x20a6<span id="payback">0</span> for repayment
+            {"\u20A6"}
+            <span id="payback">0</span> for repayment
           </p>
           <p>
-            &#x20a6<span id="emergency">0</span> for emergency
+            {"\u20A6"}
+            <span id="emergency">0</span> for emergency
           </p>
           <p>
             <strong>
-              &#x20a6<span id="total">0</span>
+              {"\u20A6"}
+              <span id="total">0</span>
             </strong>{" "}
             is deductibles
           </p>
           <p>
             <strong>
-              &#x20a6<span id="balance">0</span>
+              {"\u20A6"}
+              <span id="balance">0</span>
             </strong>{" "}
             is your balance
           </p>
