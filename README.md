@@ -1,9 +1,9 @@
 # TODOs
 - [x] Add Total Text
-- [ ] Make APP PWA
-  - [ ] Cache Offline files and work offline too
-  - [ ] Install to Phone
-  - [ ] App Icon
+- [x] Make APP PWA
+  - [x] Cache Offline files and work offline too
+  - [x] Install to Phone
+  - [x] App Icon
 
 
 ## Level 1
@@ -13,3 +13,10 @@
 - [ ] alert user using (Sonner)[https://sonner.emilkowal.ski/] about errors
 - [x] Implement system dependant light/dark mode
 - [x] Implement dark theme toggle button
+
+## Level 2
+- [ ] Convert from vanila to Framework
+- [ ] REACTJS
+- [ ] NextJS
+- [ ] SolidJS
+- [ ] Svelte
